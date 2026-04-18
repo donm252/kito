@@ -1,199 +1,50 @@
-
 <style>
-*{box-sizing:border-box;margin:0;padding:0}
-body{font-family:var(--font-sans)}
-.hero{background:linear-gradient(135deg,#fce4ec 0%,#fff9c4 100%);padding:3rem 2rem 2.5rem;text-align:center;border-radius:var(--border-radius-lg);margin-bottom:2rem;border:0.5px solid #f4c0d1}
-.badge{display:inline-block;background:#c2185b;color:#fff;font-size:11px;font-weight:500;letter-spacing:.05em;padding:4px 14px;border-radius:20px;margin-bottom:1rem;text-transform:uppercase}
-.hero h1{font-size:clamp(22px,4vw,34px);font-weight:500;color:#880e4f;line-height:1.25;margin-bottom:.75rem}
-.hero h2{font-size:clamp(14px,2.5vw,18px);font-weight:400;color:#ad1457;margin-bottom:1.5rem;line-height:1.5}
-.price-pill{display:inline-flex;align-items:center;gap:12px;background:#fff;border:2px solid #c2185b;border-radius:40px;padding:.6rem 1.5rem;margin-bottom:1.5rem}
-.price-old{font-size:14px;color:#999;text-decoration:line-through}
-.price-now{font-size:28px;font-weight:500;color:#c2185b}
-.price-save{font-size:12px;background:#fce4ec;color:#880e4f;padding:3px 10px;border-radius:12px}
-.cta-btn{display:inline-block;background:#c2185b;color:#fff;font-size:16px;font-weight:500;padding:.9rem 2.5rem;border-radius:40px;cursor:pointer;border:none;margin-bottom:.75rem;width:100%;max-width:360px}
-.cta-btn:hover{background:#880e4f}
-.trust-row{display:flex;justify-content:center;gap:1.5rem;flex-wrap:wrap;font-size:12px;color:#ad1457}
-.trust-item{display:flex;align-items:center;gap:5px}
-.section{padding:2rem;margin-bottom:1.5rem;background:var(--color-background-primary);border-radius:var(--border-radius-lg);border:0.5px solid var(--color-border-tertiary)}
-.section h2{font-size:20px;font-weight:500;color:var(--color-text-primary);margin-bottom:1.25rem}
-.section h3{font-size:15px;font-weight:500;color:var(--color-text-primary);margin-bottom:.5rem}
-.problem-box{background:#fff3f3;border-left:3px solid #e24b4a;border-radius:0 var(--border-radius-md) var(--border-radius-md) 0;padding:1rem 1.25rem;margin-bottom:.75rem}
-.problem-box p{font-size:14px;color:#791f1f;line-height:1.6}
-.check-list{list-style:none;display:flex;flex-direction:column;gap:.6rem}
-.check-list li{font-size:14px;color:var(--color-text-primary);line-height:1.5;display:flex;align-items:flex-start;gap:8px}
-.check-list li::before{content:"✓";color:#2e7d32;font-weight:500;flex-shrink:0;margin-top:1px}
-.what-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem;margin-top:1rem}
-.what-card{background:var(--color-background-secondary);border-radius:var(--border-radius-md);padding:1rem;border:0.5px solid var(--color-border-tertiary)}
-.what-card .icon{font-size:22px;margin-bottom:.5rem}
-.what-card h3{font-size:13px;font-weight:500;color:var(--color-text-primary);margin-bottom:.35rem}
-.what-card p{font-size:12px;color:var(--color-text-secondary);line-height:1.5}
-.bonus-row{display:flex;align-items:flex-start;gap:12px;padding:.85rem 0;border-bottom:0.5px solid var(--color-border-tertiary)}
-.bonus-row:last-child{border-bottom:none}
-.bonus-tag{background:#fce4ec;color:#880e4f;font-size:11px;font-weight:500;padding:3px 10px;border-radius:12px;white-space:nowrap;flex-shrink:0}
-.bonus-row p{font-size:13px;color:var(--color-text-primary);line-height:1.5}
-.testimonial{background:var(--color-background-secondary);border-radius:var(--border-radius-md);padding:1.25rem;margin-bottom:1rem;border:0.5px solid var(--color-border-tertiary)}
-.testimonial .stars{color:#f57f17;font-size:14px;margin-bottom:.5rem}
-.testimonial blockquote{font-size:14px;color:var(--color-text-primary);line-height:1.65;font-style:italic;margin-bottom:.6rem}
-.testimonial .name{font-size:12px;font-weight:500;color:var(--color-text-secondary)}
-.faq-item{border-bottom:0.5px solid var(--color-border-tertiary);padding:.85rem 0}
-.faq-item:last-child{border-bottom:none}
-.faq-item h3{font-size:14px;font-weight:500;color:var(--color-text-primary);margin-bottom:.4rem}
-.faq-item p{font-size:13px;color:var(--color-text-secondary);line-height:1.6}
-.guarantee{background:#eaf3de;border:1px solid #97c459;border-radius:var(--border-radius-lg);padding:1.5rem;text-align:center;margin-bottom:1.5rem}
-.guarantee h3{font-size:16px;font-weight:500;color:#27500a;margin-bottom:.5rem}
-.guarantee p{font-size:13px;color:#3b6d11;line-height:1.6}
-.final-cta{text-align:center;padding:2.5rem 2rem;background:linear-gradient(135deg,#fce4ec,#fff9c4);border-radius:var(--border-radius-lg);border:0.5px solid #f4c0d1}
-.final-cta h2{font-size:22px;font-weight:500;color:#880e4f;margin-bottom:.5rem}
-.final-cta p{font-size:14px;color:#ad1457;margin-bottom:1.5rem;line-height:1.6}
-.divider{text-align:center;font-size:11px;color:var(--color-text-tertiary);margin:.5rem 0}
-.scarcity{font-size:12px;color:#a32d2d;margin-top:.5rem}
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: var(--font-sans, sans-serif); line-height: 1.6; color: #333; }
+  
+  /* Mobile-first wrapper */
+  .container { width: 95%; max-width: 680px; margin: 0 auto; padding: 1rem 0; }
+  
+  .hero { background: linear-gradient(135deg,#fce4ec 0%,#fff9c4 100%); padding: 2rem 1rem; text-align:center; border-radius: 12px; margin-bottom: 2rem; border: 0.5px solid #f4c0d1; }
+  .badge { display:inline-block; background:#c2185b; color:#fff; font-size:10px; font-weight:600; letter-spacing:.05em; padding:4px 12px; border-radius:20px; margin-bottom:1rem; text-transform:uppercase; }
+  .hero h1 { font-size: clamp(24px, 6vw, 34px); font-weight:700; color:#880e4f; line-height:1.2; margin-bottom:.75rem; }
+  .hero h2 { font-size: clamp(15px, 3vw, 18px); font-weight:400; color:#ad1457; margin-bottom:1.5rem; }
+  
+  .price-pill { display:inline-flex; align-items:center; gap:10px; background:#fff; border:2px solid #c2185b; border-radius:40px; padding:.5rem 1.2rem; }
+  .price-old { font-size:14px; color:#999; text-decoration:line-through; }
+  .price-now { font-size:24px; font-weight:700; color:#c2185b; }
+  
+  .cta-btn { display:block; background:#c2185b; color:#fff; font-size:16px; font-weight:600; padding:1rem; border-radius:40px; border:none; margin: 1rem auto; width:100%; max-width:360px; cursor:pointer; }
+  
+  .trust-row { display:flex; justify-content:center; gap: 10px; flex-wrap:wrap; font-size:11px; color:#ad1457; margin-top: 1rem; }
+  
+  .section { padding: 1.5rem; margin-bottom:1.5rem; background:#fff; border-radius: 12px; border: 0.5px solid #eee; }
+  .what-grid { display:grid; grid-template-columns: 1fr; gap:1rem; margin-top:1rem; }
+  @media (min-width: 500px) {
+    .what-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+  
+  .bonus-row { display:flex; align-items:flex-start; gap:12px; padding:1rem 0; border-bottom:0.5px solid #eee; }
+  .bonus-tag { background:#fce4ec; color:#880e4f; font-size:10px; padding:3px 8px; border-radius:12px; font-weight:bold; }
+  
+  .guarantee { background:#eaf3de; border-radius:12px; padding:1.5rem; text-align:center; }
+  .final-cta { text-align:center; padding:2rem 1rem; background:linear-gradient(135deg,#fce4ec,#fff9c4); border-radius:12px; }
 </style>
 
-<div style="max-width:680px;margin:0 auto;padding:1rem">
-
-<div class="hero">
-  <div class="badge">New Release — Digital Download</div>
-  <h1>Ketogenic Fat Loss Diet 101</h1>
-  <h2>The Pinterest-Perfect Guide to Rapid &amp; Sustainable Fat Loss<br>— 14-Day Meal Plan · 5-Ingredient Recipes · Science Made Simple</h2>
-  <div class="price-pill">
-    <span class="price-old">$27</span>
-    <span class="price-now">$7</span>
-    <span class="price-save">74% off launch price</span>
-  </div>
-  <br>
-  <button class="cta-btn" onclick="openLink('https://gumroad.com')">Get Instant Access — $7</button>
-  <div class="divider">Instant PDF download · No subscription</div>
-  <div class="trust-row">
-    <span class="trust-item">⬇ Instant Download</span>
-    <span class="trust-item">✓ 30-Day Guarantee</span>
-    <span class="trust-item">✓ 8,000+ Words</span>
-    <span class="trust-item">✓ 180 Pinterest Pins</span>
-  </div>
-</div>
-
-<div class="section">
-  <h2>Does any of this sound familiar?</h2>
-  <div class="problem-box"><p>You've tried calorie counting and lost the same 10 lbs three times — only to gain it back every single time.</p></div>
-  <div class="problem-box"><p>You eat a "healthy" breakfast and you're starving again by 10am. The hunger never stops.</p></div>
-  <div class="problem-box"><p>You've cut fat, eaten salads, and done everything "right" — and the scale barely moved.</p></div>
-  <div class="problem-box"><p>You're exhausted, foggy, and running on caffeine because your energy crashes every afternoon.</p></div>
-  <p style="font-size:14px;color:var(--color-text-secondary);margin-top:1rem;line-height:1.6">If you checked even one of those boxes — this book was written for you. And none of those struggles are your fault. The system was broken from the start.</p>
-</div>
-
-<div class="section">
-  <h2>What's inside your guide</h2>
-  <div class="what-grid">
-    <div class="what-card">
-      <div class="icon">🔥</div>
-      <h3>The Science, Simplified</h3>
-      <p>Ketosis explained with the Logs vs. Kindling analogy — no PhD required. Plus: how to skip the Keto Flu entirely.</p>
+<div class="container">
+  <div class="hero">
+    <div class="badge">New Release — Digital Download</div>
+    <h1>Ketogenic Fat Loss Diet 101</h1>
+    <h2>The Pinterest-Perfect Guide to Rapid &amp; Sustainable Fat Loss</h2>
+    <div class="price-pill">
+      <span class="price-old">$27</span>
+      <span class="price-now">$7</span>
     </div>
-    <div class="what-card">
-      <div class="icon">🛒</div>
-      <h3>The Yes/No Food Vault</h3>
-      <p>Every food categorized: Fat Burners, Careful Carvers, and the Hidden Saboteurs most people never suspect.</p>
-    </div>
-    <div class="what-card">
-      <div class="icon">📅</div>
-      <h3>14-Day Rapid Start Plan</h3>
-      <p>42 meals, every recipe 5 ingredients or less. Full grocery lists and a Sunday meal prep blueprint included.</p>
-    </div>
-    <div class="what-card">
-      <div class="icon">🍫</div>
-      <h3>Snack Cheat Sheet</h3>
-      <p>20 grab-and-go snacks under 5g net carbs, plus 3 fat bomb recipes and your Hunger Emergency Kit.</p>
-    </div>
-    <div class="what-card">
-      <div class="icon">🍽</div>
-      <h3>Dining Out Guide</h3>
-      <p>Exactly what to order at Mexican, Italian, and fast food restaurants — including secret menu hacks.</p>
-    </div>
-    <div class="what-card">
-      <div class="icon">📊</div>
-      <h3>Plateau Breaker Protocol</h3>
-      <p>The 7-day reset plan for when the scale stops moving — including the diagnostic checklist and egg fast option.</p>
+    <button class="cta-btn" onclick="openLink('https://gumroad.com')">Get Instant Access — $7</button>
+    <div class="trust-row">
+      <span>⬇ Instant Download</span>
+      <span>✓ 30-Day Guarantee</span>
     </div>
   </div>
-</div>
-
-<div class="section">
-  <h2>Everything you get for $7</h2>
-  <div class="bonus-row">
-    <span class="bonus-tag">MAIN GUIDE</span>
-    <p><strong>Ketogenic Fat Loss Diet 101</strong> — 8,000-word, 30-page premium ebook covering all 8 chapters, complete with the 14-day meal plan, food vault, and lifestyle blueprint.</p>
+  
   </div>
-  <div class="bonus-row">
-    <span class="bonus-tag">BONUS 1</span>
-    <p><strong>The Keto Quick-Reference Card</strong> — A single-page printable cheat sheet with your Yes/No food list, daily macro targets, and electrolyte guide. Stick it on your fridge.</p>
-  </div>
-  <div class="bonus-row">
-    <span class="bonus-tag">BONUS 2</span>
-    <p><strong>Two Full Grocery Lists</strong> — Separated by week and organized by store aisle, so your shopping is done in under 20 minutes.</p>
-  </div>
-  <div class="bonus-row">
-    <span class="bonus-tag">BONUS 3</span>
-    <p><strong>The Keto Swap Sheet</strong> — 15 carb-to-keto food swaps so you never feel like you're "missing out" on your favorite foods.</p>
-  </div>
-  <div class="bonus-row">
-    <span class="bonus-tag">BONUS 4</span>
-    <p><strong>8 Pinterest Pin Concepts</strong> — Ready-to-use, platform-specific pin ideas to promote your keto journey, share your transformation, or market this guide.</p>
-  </div>
-</div>
-
-<div class="section">
-  <h2>What readers are saying</h2>
-  <div class="testimonial">
-    <div class="stars">★★★★★</div>
-    <blockquote>"I've tried every diet for 6 years. This is the first one where I actually understood WHY it worked — and the meal plan was so simple I stopped dreading dinner. Down 11 lbs in 3 weeks."</blockquote>
-    <div class="name">Sarah M., 34 — Lagos, Nigeria</div>
-  </div>
-  <div class="testimonial">
-    <div class="stars">★★★★★</div>
-    <blockquote>"The dining out guide alone was worth 10x the price. I travel for work constantly and always thought keto was impossible on the road. I was wrong."</blockquote>
-    <div class="name">Priya K., 41 — London, UK</div>
-  </div>
-  <div class="testimonial">
-    <div class="stars">★★★★★</div>
-    <blockquote>"The Logs vs. Kindling explanation finally made keto click for me. I've been reading about this for months and nothing made it this clear. The fat bombs recipe is now a weekly staple."</blockquote>
-    <div class="name">Jessica T., 29 — Atlanta, USA</div>
-  </div>
-</div>
-
-<div class="guarantee">
-  <h3>30-Day 100% Money-Back Guarantee</h3>
-  <p>Read the entire guide. Follow the 14-day plan. If you don't feel a real difference in your energy, hunger, and body — email me for a full refund, no questions asked. At $7, the only risk is not trying.</p>
-</div>
-
-<div class="section">
-  <h2>Frequently asked questions</h2>
-  <div class="faq-item">
-    <h3>Do I need any special equipment or expensive ingredients?</h3>
-    <p>No. Every recipe uses 5 ingredients or less, all available at any regular grocery store. No spiralizers, no specialty health food stores, no $40 protein powders.</p>
-  </div>
-  <div class="faq-item">
-    <h3>I've tried keto before and failed. Why would this be different?</h3>
-    <p>Most keto failures happen because of the Keto Flu, hidden carb saboteurs, or not having a real meal plan. This guide specifically addresses all three — with the Flu prevention protocol, the Hidden Saboteur food list, and 14 days of pre-planned meals.</p>
-  </div>
-  <div class="faq-item">
-    <h3>Is this suitable for vegetarians or vegans?</h3>
-    <p>The guide is primarily written for omnivores, but Chapter 3's food lists include plenty of plant-based keto options. Vegetarian keto is very doable — vegan keto requires more customization.</p>
-  </div>
-  <div class="faq-item">
-    <h3>How quickly will I receive my download?</h3>
-    <p>Instantly. The moment your Gumroad payment processes, you'll receive a download link via email. The PDF works on any phone, tablet, or computer.</p>
-  </div>
-  <div class="faq-item">
-    <h3>I'm not a woman — is this still relevant for me?</h3>
-    <p>Absolutely. While the tone and language speak to women, the nutritional science, meal plan, and protocols work for everyone. Keto is keto.</p>
-  </div>
-</div>
-
-<div class="final-cta">
-  <h2>Your transformation starts with one decision</h2>
-  <p>For the cost of one cup of coffee, you get the complete blueprint that could change how you eat — and how you feel — for the rest of your life.</p>
-  <button class="cta-btn" onclick="openLink('https://gumroad.com')">Yes, I Want This — $7</button>
-  <div class="divider">Secure checkout · Instant download · 30-day guarantee</div>
-  <div class="scarcity">Launch price of $7 ends soon — regular price is $27</div>
-</div>
-
-</div>
