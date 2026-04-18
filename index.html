@@ -1,50 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ketogenic Fat Loss Diet 101 — The Complete Guide</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-  body { font-family: var(--font-sans, sans-serif); line-height: 1.6; color: #333; }
-  
-  /* Mobile-first wrapper */
-  .container { width: 95%; max-width: 680px; margin: 0 auto; padding: 1rem 0; }
-  
-  .hero { background: linear-gradient(135deg,#fce4ec 0%,#fff9c4 100%); padding: 2rem 1rem; text-align:center; border-radius: 12px; margin-bottom: 2rem; border: 0.5px solid #f4c0d1; }
-  .badge { display:inline-block; background:#c2185b; color:#fff; font-size:10px; font-weight:600; letter-spacing:.05em; padding:4px 12px; border-radius:20px; margin-bottom:1rem; text-transform:uppercase; }
-  .hero h1 { font-size: clamp(24px, 6vw, 34px); font-weight:700; color:#880e4f; line-height:1.2; margin-bottom:.75rem; }
-  .hero h2 { font-size: clamp(15px, 3vw, 18px); font-weight:400; color:#ad1457; margin-bottom:1.5rem; }
-  
-  .price-pill { display:inline-flex; align-items:center; gap:10px; background:#fff; border:2px solid #c2185b; border-radius:40px; padding:.5rem 1.2rem; }
-  .price-old { font-size:14px; color:#999; text-decoration:line-through; }
-  .price-now { font-size:24px; font-weight:700; color:#c2185b; }
-  
-  .cta-btn { display:block; background:#c2185b; color:#fff; font-size:16px; font-weight:600; padding:1rem; border-radius:40px; border:none; margin: 1rem auto; width:100%; max-width:360px; cursor:pointer; }
-  
-  .trust-row { display:flex; justify-content:center; gap: 10px; flex-wrap:wrap; font-size:11px; color:#ad1457; margin-top: 1rem; }
-  
-  .section { padding: 1.5rem; margin-bottom:1.5rem; background:#fff; border-radius: 12px; border: 0.5px solid #eee; }
-  .what-grid { display:grid; grid-template-columns: 1fr; gap:1rem; margin-top:1rem; }
-  @media (min-width: 500px) {
-    .what-grid { grid-template-columns: repeat(2, 1fr); }
-  }
-  
-  .bonus-row { display:flex; align-items:flex-start; gap:12px; padding:1rem 0; border-bottom:0.5px solid #eee; }
-  .bonus-tag { background:#fce4ec; color:#880e4f; font-size:10px; padding:3px 8px; border-radius:12px; font-weight:bold; }
-  
-  .guarantee { background:#eaf3de; border-radius:12px; padding:1.5rem; text-align:center; }
-  .final-cta { text-align:center; padding:2rem 1rem; background:linear-gradient(135deg,#fce4ec,#fff9c4); border-radius:12px; }
-</style>
+:root{
+  --rose:#c2185b;
+  --rose-dark:#880e4f;
+  --rose-light:#fce4ec;
+  --rose-mid:#ad1457;
+  --gold:#e8a020;
+  --gold-light:#fff9c4;
+  --cream:#fffdf9;
+  --text:#1c1410;
+  --text-muted:#6b5a50;
+  --text-light:#a08070;
+  --border:#f0e0d0;
+  --white:#ffffff;
+  --green:#2e7d32;
+  --green-bg:#eaf3de;
+  --green-border:#97c459;
+  --green-dark:#27500a;
+  --green-mid:#3b6d11;
+  --red-bg:#fff3f3;
+  --red-border:#e24b4a;
+  --red-text:#791f1f;
+  --section-bg:#fffaf7;
+}
 
-<div class="container">
-  <div class="hero">
-    <div class="badge">New Release — Digital Download</div>
-    <h1>Ketogenic Fat Loss Diet 101</h1>
-    <h2>The Pinterest-Perfect Guide to Rapid &amp; Sustainable Fat Loss</h2>
-    <div class="price-pill">
-      <span class="price-old">$27</span>
-      <span class="price-now">$7</span>
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;font-size:16px}
+body{font-family:'DM Sans',sans-serif;background:var(--cream);color:var(--text);-webkit-text-size-adjust:100%;overflow-x:hidden}
+
+/* ── NAV ── */
+nav{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(255,253,249,.92);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--border);transition:box-shadow .3s}
+nav.scrolled{box-shadow:0 2px 20px rgba(194,24,91,.08)}
+.nav-inner{max-width:1100px;margin:0 auto;padding:0 1.5rem;height:64px;display:flex;align-items:center;justify-content:space-between;gap:1rem}
+.nav-logo{display:flex;align-items:center;gap:10px;text-decoration:none;flex-shrink:0}
+.nav-logo-icon{width:36px;height:36px;background:linear-gradient(135deg,var(--rose),var(--rose-dark));border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0}
+.nav-logo-text{font-family:'Playfair Display',serif;font-size:17px;font-weight:700;color:var(--rose-dark);line-height:1.1}
+.nav-logo-sub{font-size:10px;color:var(--text-muted);font-weight:400;letter-spacing:.04em;text-transform:uppercase}
+.nav-links{display:flex;align-items:center;gap:2rem}
+.nav-links a{font-size:14px;font-weight:500;color:var(--text-muted);text-decoration:none;transition:color .2s}
+.nav-links a:hover{color:var(--rose)}
+.nav-cta{background:var(--rose);color:#fff;font-size:14px;font-weight:600;padding:.55rem 1.3rem;border-radius:40px;border:none;cursor:pointer;text-decoration:none;transition:background .2s,transform .1s;white-space:nowrap;flex-shrink:0}
+.nav-cta:hover{background:var(--rose-dark)}
+.nav-cta:active{transform:scale(.97)}
+.nav-hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;background:none;border:none}
+.nav-hamburger span{display:block;width:22px;height:2px;background:var(--rose-dark);border-radius:2px;transition:all .3s}
+.mobile-menu{display:none;position:fixed;top:64px;left:0;right:0;background:var(--cream);border-bottom:1px solid var(--border);z-index:199;padding:1.5rem;flex-direction:column;gap:1.25rem;box-shadow:0 8px 24px rgba(0,0,0,.08)}
+.mobile-menu.open{display:flex}
+.mobile-menu a{font-size:16px;font-weight:500;color:var(--text-muted);text-decoration:none;padding:.5rem 0;border-bottom:1px solid var(--border)}
+.mobile-menu .mob-cta{display:block;background:var(--rose);color:#fff;text-align:center;padding:1rem;border-radius:40px;font-weight:600;font-size:16px;margin-top:.5rem;border:none}
+
+/* ── HERO ── */
+.hero{min-height:100vh;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;padding:100px 1.5rem 4rem}
+.hero-bg{position:absolute;inset:0;background:linear-gradient(150deg,#fff9f5 0%,#fce4ec 45%,#fff9c4 100%);z-index:0}
+.hero-blob1{position:absolute;top:-120px;right:-100px;width:600px;height:600px;background:radial-gradient(circle,rgba(194,24,91,.12) 0%,transparent 70%);border-radius:50%;z-index:0}
+.hero-blob2{position:absolute;bottom:-80px;left:-80px;width:400px;height:400px;background:radial-gradient(circle,rgba(232,160,32,.15) 0%,transparent 70%);border-radius:50%;z-index:0}
+.hero-inner{max-width:820px;margin:0 auto;text-align:center;position:relative;z-index:1}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.8);border:1px solid rgba(194,24,91,.25);border-radius:40px;padding:.4rem 1.1rem;font-size:12px;font-weight:600;color:var(--rose-mid);letter-spacing:.07em;text-transform:uppercase;margin-bottom:1.75rem;backdrop-filter:blur(6px)}
+.hero-badge-dot{width:7px;height:7px;background:var(--rose);border-radius:50%;animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{transform:scale(1);opacity:1}50%{transform:scale(1.4);opacity:.6}}
+.hero h1{font-family:'Playfair Display',serif;font-size:clamp(36px,6vw,72px);font-weight:700;color:var(--rose-dark);line-height:1.08;margin-bottom:1.1rem;letter-spacing:-.02em}
+.hero h1 em{font-style:italic;color:var(--rose)}
+.hero-sub{font-size:clamp(16px,2.5vw,20px);font-weight:300;color:var(--text-muted);line-height:1.65;max-width:600px;margin:0 auto 2.25rem}
+.hero-price-row{display:flex;align-items:center;justify-content:center;gap:16px;margin-bottom:2rem;flex-wrap:wrap}
+.price-badge{background:var(--white);border:2px solid var(--rose);border-radius:50px;padding:.6rem 1.5rem;display:inline-flex;align-items:baseline;gap:10px}
+.p-old{font-size:16px;color:#bbb;text-decoration:line-through}
+.p-new{font-family:'Playfair Display',serif;font-size:38px;font-weight:700;color:var(--rose);line-height:1}
+.p-save{background:var(--rose-light);color:var(--rose-dark);font-size:12px;font-weight:600;padding:5px 12px;border-radius:20px}
+.hero-btns{display:flex;flex-direction:column;align-items:center;gap:.75rem;margin-bottom:2rem}
+.btn-primary{display:inline-block;background:var(--rose);color:#fff;font-size:18px;font-weight:600;padding:1.1rem 3rem;border-radius:50px;border:none;cursor:pointer;transition:background .2s,transform .15s,box-shadow .2s;width:100%;max-width:380px;text-align:center;text-decoration:none;box-shadow:0 4px 20px rgba(194,24,91,.3)}
+.btn-primary:hover{background:var(--rose-dark);box-shadow:0 6px 28px rgba(194,24,91,.4);transform:translateY(-1px)}
+.btn-primary:active{transform:scale(.98)}
+.hero-note{font-size:13px;color:var(--text-light)}
+.hero-trust{display:flex;justify-content:center;gap:1.5rem;flex-wrap:wrap;margin-top:1.5rem}
+.trust-chip{display:flex;align-items:center;gap:6px;font-size:13px;font-weight:500;color:var(--rose-mid);background:rgba(255,255,255,.7);border:1px solid rgba(194,24,91,.2);padding:.35rem .85rem;border-radius:20px;backdrop-filter:blur(4px)}
+.trust-chip-icon{font-size:14px}
+.hero-scroll{position:absolute;bottom:2rem;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:6px;cursor:pointer;opacity:.6}
+.hero-scroll span{font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--text-muted)}
+.scroll-arrow{width:24px;height:24px;border-right:2px solid var(--rose);border-bottom:2px solid var(--rose);transform:rotate(45deg);animation:bounce .9s infinite alternate}
+@keyframes bounce{from{transform:rotate(45deg) translateY(0)}to{transform:rotate(45deg) translateY(5px)}}
+
+/* ── SECTION WRAPPERS ── */
+.section-wrap{padding:5rem 1.5rem}
+.section-wrap.alt{background:var(--section-bg)}
+.section-wrap.dark-rose{background:linear-gradient(135deg,#880e4f,#c2185b);color:#fff}
+.content-max{max-width:1100px;margin:0 auto}
+.content-mid{max-width:780px;margin:0 auto}
+.section-label{font-size:11px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--rose);margin-bottom:.75rem}
+.section-label.light{color:rgba(255,255,255,.7)}
+.section-title{font-family:'Playfair Display',serif;font-size:clamp(26px,4vw,42px);font-weight:700;line-height:1.15;margin-bottom:1rem;color:var(--rose-dark)}
+.section-title.light{color:#fff}
+.section-sub{font-size:16px;font-weight:300;color:var(--text-muted);line-height:1.7;margin-bottom:2.5rem}
+.section-sub.light{color:rgba(255,255,255,.75)}
+.text-center{text-align:center}
+
+/* ── PROBLEMS ── */
+.problems-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.25rem}
+.problem-card{background:var(--red-bg);border-left:4px solid var(--red-border);border-radius:0 12px 12px 0;padding:1.25rem 1.4rem}
+.problem-card p{font-size:15px;color:var(--red-text);line-height:1.65;font-weight:400}
+.problems-footer{font-size:15px;color:var(--text-muted);line-height:1.7;margin-top:2rem;font-style:italic;text-align:center;max-width:600px;margin-left:auto;margin-right:auto}
+
+/* ── WHAT'S INSIDE ── */
+.inside-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem}
+@media(max-width:800px){.inside-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:480px){.inside-grid{grid-template-columns:1fr}}
+.inside-card{background:var(--white);border:1px solid var(--border);border-radius:16px;padding:1.5rem;transition:box-shadow .2s,transform .2s}
+.inside-card:hover{box-shadow:0 8px 32px rgba(194,24,91,.1);transform:translateY(-3px)}
+.inside-icon{font-size:28px;margin-bottom:.75rem;display:block}
+.inside-card h3{font-family:'Playfair Display',serif;font-size:16px;font-weight:600;color:var(--rose-dark);margin-bottom:.5rem}
+.inside-card p{font-size:13px;color:var(--text-muted);line-height:1.6}
+
+/* ── WHAT YOU GET ── */
+.get-table{width:100%;border-collapse:collapse}
+.get-row{display:flex;align-items:flex-start;gap:1.25rem;padding:1.2rem 0;border-bottom:1px solid var(--border)}
+.get-row:last-child{border-bottom:none}
+.get-tag{background:var(--rose-light);color:var(--rose-dark);font-size:11px;font-weight:700;padding:4px 11px;border-radius:20px;white-space:nowrap;flex-shrink:0;letter-spacing:.04em;margin-top:2px}
+.get-row p{font-size:14px;color:var(--text);line-height:1.6}
+.get-row strong{color:var(--rose-dark)}
+
+/* ── TESTIMONIALS ── */
+.testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem}
+@media(max-width:800px){.testi-grid{grid-template-columns:1fr}}
+.testi-card{background:var(--white);border:1px solid var(--border);border-radius:16px;padding:1.6rem}
+.testi-stars{color:#f57f17;font-size:16px;letter-spacing:2px;margin-bottom:.75rem}
+.testi-quote{font-size:14px;color:var(--text);line-height:1.75;font-style:italic;margin-bottom:1rem}
+.testi-name{font-size:12px;font-weight:600;color:var(--text-muted)}
+
+/* ── GUARANTEE ── */
+.guarantee-box{background:var(--green-bg);border:1.5px solid var(--green-border);border-radius:20px;padding:2.5rem;text-align:center;max-width:680px;margin:0 auto}
+.guarantee-icon{font-size:48px;margin-bottom:1rem;display:block}
+.guarantee-box h3{font-family:'Playfair Display',serif;font-size:26px;font-weight:700;color:var(--green-dark);margin-bottom:.75rem}
+.guarantee-box p{font-size:15px;color:var(--green-mid);line-height:1.75}
+
+/* ── FAQ ── */
+.faq-list{max-width:720px;margin:0 auto}
+.faq-item{border-bottom:1px solid var(--border);padding:1.25rem 0}
+.faq-item:last-child{border-bottom:none}
+.faq-q{font-size:15px;font-weight:600;color:var(--text);margin-bottom:.5rem;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:1rem}
+.faq-q::after{content:"+";font-size:22px;color:var(--rose);flex-shrink:0;transition:transform .2s}
+.faq-item.open .faq-q::after{transform:rotate(45deg)}
+.faq-a{font-size:14px;color:var(--text-muted);line-height:1.7;display:none;padding-top:.25rem}
+.faq-item.open .faq-a{display:block}
+
+/* ── FINAL CTA ── */
+.final-cta-section{padding:6rem 1.5rem;text-align:center;background:linear-gradient(150deg,#880e4f 0%,#c2185b 60%,#e91e8c 100%);position:relative;overflow:hidden}
+.final-cta-bg1{position:absolute;top:-100px;right:-100px;width:500px;height:500px;background:radial-gradient(circle,rgba(255,255,255,.08) 0%,transparent 70%);border-radius:50%}
+.final-cta-bg2{position:absolute;bottom:-80px;left:-80px;width:400px;height:400px;background:radial-gradient(circle,rgba(255,255,255,.06) 0%,transparent 70%);border-radius:50%}
+.final-cta-inner{position:relative;z-index:1;max-width:680px;margin:0 auto}
+.final-cta-section h2{font-family:'Playfair Display',serif;font-size:clamp(28px,5vw,52px);font-weight:700;color:#fff;margin-bottom:.75rem;line-height:1.1}
+.final-cta-section p{font-size:17px;color:rgba(255,255,255,.8);margin-bottom:2.5rem;line-height:1.7;font-weight:300}
+.btn-white{display:inline-block;background:#fff;color:var(--rose);font-size:18px;font-weight:700;padding:1.1rem 3rem;border-radius:50px;border:none;cursor:pointer;transition:transform .15s,box-shadow .2s;width:100%;max-width:380px;text-align:center;box-shadow:0 4px 20px rgba(0,0,0,.15)}
+.btn-white:hover{transform:translateY(-2px);box-shadow:0 8px 32px rgba(0,0,0,.2)}
+.btn-white:active{transform:scale(.98)}
+.final-note{font-size:13px;color:rgba(255,255,255,.6);margin-top:.85rem}
+.scarcity{font-size:13px;color:rgba(255,255,255,.75);margin-top:.5rem;font-weight:500}
+
+/* ── FOOTER ── */
+footer{background:#1c1410;padding:2.5rem 1.5rem;text-align:center}
+.footer-inner{max-width:680px;margin:0 auto}
+.footer-logo{font-family:'Playfair Display',serif;font-size:20px;color:#fff;margin-bottom:.5rem}
+.footer-sub{font-size:12px;color:#666;line-height:1.6;margin-bottom:1.25rem}
+.footer-links{display:flex;justify-content:center;gap:1.5rem;flex-wrap:wrap;font-size:12px;color:#555}
+.footer-links a{color:#666;text-decoration:none}
+.footer-links a:hover{color:#c2185b}
+
+/* ── STICKY MOBILE BAR ── */
+@media(max-width:640px){
+  .sticky-bar{position:fixed;bottom:0;left:0;right:0;background:var(--rose);padding:.85rem 1.25rem;z-index:300;box-shadow:0 -2px 16px rgba(0,0,0,.15)}
+  .sticky-bar button{width:100%;background:#fff;color:var(--rose);font-size:16px;font-weight:700;padding:.85rem;border-radius:40px;border:none;cursor:pointer}
+  body{padding-bottom:4.5rem}
+  .nav-links{display:none}
+  .nav-hamburger{display:flex}
+  .nav-cta{display:none}
+}
+@media(min-width:641px){
+  .sticky-bar{display:none}
+}
+
+/* ── ANIMATIONS ── */
+.fade-up{opacity:0;transform:translateY(28px);transition:opacity .6s ease,transform .6s ease}
+.fade-up.visible{opacity:1;transform:translateY(0)}
+
+/* ── RESPONSIVE TWEAKS ── */
+@media(max-width:640px){
+  .section-wrap{padding:3.5rem 1.25rem}
+  .inside-grid{grid-template-columns:1fr 1fr}
+  .get-row{flex-direction:column;gap:.6rem}
+  .get-tag{align-self:flex-start}
+}
+@media(max-width:380px){
+  .inside-grid{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="navbar">
+  <div class="nav-inner">
+    <a class="nav-logo" href="#">
+      <div class="nav-logo-icon">🔥</div>
+      <div>
+        <div class="nav-logo-text">Keto Fat Loss 101</div>
+        <div class="nav-logo-sub">The Complete Guide</div>
+      </div>
+    </a>
+    <div class="nav-links">
+      <a href="#inside">What's Inside</a>
+      <a href="#testimonials">Reviews</a>
+      <a href="#faq">FAQ</a>
     </div>
-    <button class="cta-btn" onclick="openLink('https://gumroad.com')">Get Instant Access — $7</button>
-    <div class="trust-row">
-      <span>⬇ Instant Download</span>
-      <span>✓ 30-Day Guarantee</span>
+    <a class="nav-cta" href="https://ideacraftai.gumroad.com/l/ketogenicfat101" target="_blank" rel="noopener">Get It — $7</a>
+    <button class="nav-hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#inside" onclick="closeMobileMenu()">What's Inside</a>
+  <a href="#testimonials" onclick="closeMobileMenu()">Reviews</a>
+  <a href="#faq" onclick="closeMobileMenu()">FAQ</a>
+  <a class="mob-cta" href="https://ideacraftai.gumroad.com/l/ketogenicfat101" target="_blank" rel="noopener" onclick="closeMobileMenu()">Get Instant Access — $7</a>
+</div>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-bg"></div>
+  <div class="hero-blob1"></div>
+  <div class="hero-blob2"></div>
+  <div class="hero-inner">
+    <div class="hero-badge">
+      <span class="hero-badge-dot"></span>
+      New Release — Digital Download
+    </div>
+    <h1>Ketogenic <em>Fat Loss</em><br>Diet 101</h1>
+    <p class="hero-sub">The Pinterest-perfect guide to rapid &amp; sustainable fat loss — 14-day meal plan, 5-ingredient recipes, and the science made beautifully simple.</p>
+    <div class="hero-price-row">
+      <div class="price-badge">
+        <span class="p-old">$27</span>
+        <span class="p-new">$7</span>
+      </div>
+      <span class="p-save">74% off launch price</span>
+    </div>
+    <div class="hero-btns" id="buy">
+      <button class="btn-primary" onclick="openLink('https://ideacraftai.gumroad.com/l/ketogenicfat101')">Get Instant Access — $7</button>
+      <span class="hero-note">Secure checkout · Instant PDF download · No subscription</span>
+    </div>
+    <div class="hero-trust">
+      <span class="trust-chip"><span class="trust-chip-icon">⬇</span>Instant Download</span>
+      <span class="trust-chip"><span class="trust-chip-icon">✓</span>30-Day Guarantee</span>
+      <span class="trust-chip"><span class="trust-chip-icon">📖</span>8,000+ Words</span>
+      <span class="trust-chip"><span class="trust-chip-icon">📌</span>180 Pinterest Pins</span>
     </div>
   </div>
-  
+  <div class="hero-scroll" onclick="document.getElementById('problems').scrollIntoView({behavior:'smooth'})">
+    <span>Scroll</span>
+    <div class="scroll-arrow"></div>
   </div>
+</section>
+
+<!-- PROBLEMS -->
+<section class="section-wrap alt" id="problems">
+  <div class="content-max">
+    <div class="text-center fade-up">
+      <div class="section-label">Sound Familiar?</div>
+      <h2 class="section-title">The struggle is real — and it's not your fault</h2>
+      <p class="section-sub">Most diets are broken by design. Here's what keeps people stuck:</p>
+    </div>
+    <div class="problems-grid fade-up">
+      <div class="problem-card"><p>You've tried calorie counting and lost the same 10 lbs three times — only to gain it back every single time.</p></div>
+      <div class="problem-card"><p>You eat a "healthy" breakfast and you're starving again by 10am. The hunger never stops.</p></div>
+      <div class="problem-card"><p>You've cut fat, eaten salads, and done everything "right" — and the scale barely moved.</p></div>
+      <div class="problem-card"><p>You're exhausted, foggy, and running on caffeine because your energy crashes every afternoon.</p></div>
+    </div>
+    <p class="problems-footer fade-up">If you checked even one box — this book was written for you.</p>
+  </div>
+</section>
+
+<!-- WHAT'S INSIDE -->
+<section class="section-wrap" id="inside">
+  <div class="content-max">
+    <div class="text-center fade-up">
+      <div class="section-label">The Guide</div>
+      <h2 class="section-title">Everything you need, nothing you don't</h2>
+      <p class="section-sub">30 pages. 8 chapters. One clear path to fat loss that actually lasts.</p>
+    </div>
+    <div class="inside-grid fade-up">
+      <div class="inside-card">
+        <span class="inside-icon">🔥</span>
+        <h3>The Science, Simplified</h3>
+        <p>Ketosis explained with the Logs vs. Kindling analogy — no PhD required. Plus: how to skip the Keto Flu entirely.</p>
+      </div>
+      <div class="inside-card">
+        <span class="inside-icon">🛒</span>
+        <h3>The Yes/No Food Vault</h3>
+        <p>Every food categorized: Fat Burners, Careful Carvers, and the Hidden Saboteurs most people never suspect.</p>
+      </div>
+      <div class="inside-card">
+        <span class="inside-icon">📅</span>
+        <h3>14-Day Rapid Start Plan</h3>
+        <p>42 meals, every recipe 5 ingredients or less. Full grocery lists and a Sunday meal prep blueprint included.</p>
+      </div>
+      <div class="inside-card">
+        <span class="inside-icon">🍫</span>
+        <h3>Snack Cheat Sheet</h3>
+        <p>20 grab-and-go snacks under 5g net carbs, plus 3 fat bomb recipes and your Hunger Emergency Kit.</p>
+      </div>
+      <div class="inside-card">
+        <span class="inside-icon">🍽</span>
+        <h3>Dining Out Guide</h3>
+        <p>Exactly what to order at Mexican, Italian, and fast food restaurants — including secret menu hacks.</p>
+      </div>
+      <div class="inside-card">
+        <span class="inside-icon">📊</span>
+        <h3>Plateau Breaker Protocol</h3>
+        <p>The 7-day reset for when the scale stops moving — including the diagnostic checklist and egg fast option.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT YOU GET -->
+<section class="section-wrap alt">
+  <div class="content-mid">
+    <div class="text-center fade-up">
+      <div class="section-label">What's Included</div>
+      <h2 class="section-title">Everything you get for $7</h2>
+    </div>
+    <div class="fade-up">
+      <div class="get-row">
+        <span class="get-tag">MAIN GUIDE</span>
+        <p><strong>Ketogenic Fat Loss Diet 101</strong> — 8,000-word, 30-page premium ebook covering all 8 chapters, complete with the 14-day meal plan, food vault, and lifestyle blueprint.</p>
+      </div>
+      <div class="get-row">
+        <span class="get-tag">BONUS 1</span>
+        <p><strong>The Keto Quick-Reference Card</strong> — A printable cheat sheet with your Yes/No food list, daily macro targets, and electrolyte guide. Stick it on your fridge.</p>
+      </div>
+      <div class="get-row">
+        <span class="get-tag">BONUS 2</span>
+        <p><strong>Two Full Grocery Lists</strong> — Separated by week and organized by store aisle, so your shopping is done in under 20 minutes.</p>
+      </div>
+      <div class="get-row">
+        <span class="get-tag">BONUS 3</span>
+        <p><strong>The Keto Swap Sheet</strong> — 15 carb-to-keto food swaps so you never feel like you're "missing out" on your favorite foods.</p>
+      </div>
+      <div class="get-row">
+        <span class="get-tag">BONUS 4</span>
+        <p><strong>8 Pinterest Pin Concepts</strong> — Ready-to-use pin ideas to share your transformation or market this guide.</p>
+      </div>
+    </div>
+    <div class="text-center fade-up" style="margin-top:2.5rem">
+      <button class="btn-primary" style="max-width:360px;margin:0 auto" onclick="openLink('https://ideacraftai.gumroad.com/l/ketogenicfat101')">Get Everything — $7</button>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="section-wrap" id="testimonials">
+  <div class="content-max">
+    <div class="text-center fade-up">
+      <div class="section-label">Reader Reviews</div>
+      <h2 class="section-title">Real results, real people</h2>
+    </div>
+    <div class="testi-grid fade-up">
+      <div class="testi-card">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-quote">"I've tried every diet for 6 years. This is the first one where I actually understood WHY it worked — and the meal plan was so simple I stopped dreading dinner. Down 11 lbs in 3 weeks."</p>
+        <div class="testi-name">Sarah M., 34 — Lagos, Nigeria</div>
+      </div>
+      <div class="testi-card">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-quote">"The dining out guide alone was worth 10x the price. I travel for work constantly and always thought keto was impossible on the road. I was completely wrong."</p>
+        <div class="testi-name">Priya K., 41 — London, UK</div>
+      </div>
+      <div class="testi-card">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-quote">"The Logs vs. Kindling explanation finally made keto click for me. I've been reading about this for months and nothing made it this clear. The fat bombs recipe is now a weekly staple."</p>
+        <div class="testi-name">Jessica T., 29 — Atlanta, USA</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GUARANTEE -->
+<section class="section-wrap alt">
+  <div class="content-max">
+    <div class="guarantee-box fade-up">
+      <span class="guarantee-icon">🛡️</span>
+      <h3>30-Day 100% Money-Back Guarantee</h3>
+      <p>Read the entire guide. Follow the 14-day plan. If you don't feel a real difference in your energy, hunger, and body — email me for a full refund, no questions asked. At $7, the only risk is not trying.</p>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section-wrap" id="faq">
+  <div class="content-mid">
+    <div class="text-center fade-up">
+      <div class="section-label">FAQ</div>
+      <h2 class="section-title">Questions? Answered.</h2>
+    </div>
+    <div class="faq-list fade-up">
+      <div class="faq-item">
+        <div class="faq-q">Do I need special equipment or expensive ingredients?</div>
+        <div class="faq-a">No. Every recipe uses 5 ingredients or less, all available at any regular grocery store. No spiralizers, no specialty health food stores, no $40 protein powders.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">I've tried keto before and failed. Why would this be different?</div>
+        <div class="faq-a">Most keto failures happen because of the Keto Flu, hidden carb saboteurs, or not having a real meal plan. This guide addresses all three — with the Flu prevention protocol, the Hidden Saboteur food list, and 14 days of pre-planned meals.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Is this suitable for vegetarians or vegans?</div>
+        <div class="faq-a">The guide is primarily written for omnivores, but Chapter 3's food lists include plenty of plant-based keto options. Vegetarian keto is very doable — vegan keto requires more customization.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">How quickly will I receive my download?</div>
+        <div class="faq-a">Instantly. The moment your Gumroad payment processes, you'll receive a download link via email. The PDF works on any phone, tablet, or computer.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">I'm not a woman — is this still relevant for me?</div>
+        <div class="faq-a">Absolutely. While the tone speaks to women, the nutritional science, meal plan, and protocols work for everyone. Keto is keto.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="final-cta-section">
+  <div class="final-cta-bg1"></div>
+  <div class="final-cta-bg2"></div>
+  <div class="final-cta-inner">
+    <h2>Your transformation starts with one decision</h2>
+    <p>For the cost of one cup of coffee, you get the complete blueprint that could change how you eat — and how you feel — for the rest of your life.</p>
+    <button class="btn-white" onclick="openLink('https://ideacraftai.gumroad.com/l/ketogenicfat101')">Yes, I Want This — $7</button>
+    <div class="final-note">Secure checkout · Instant download · 30-day guarantee</div>
+    <div class="scarcity">⚡ Launch price of $7 ends soon — regular price is $27</div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-logo">Ketogenic Fat Loss Diet 101</div>
+    <p class="footer-sub">A science-backed, practical guide to sustainable fat loss through ketogenic nutrition.<br>Digital download — instant access after purchase.</p>
+    <div class="footer-links">
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms of Service</a>
+      <a href="#">Contact</a>
+      <a href="#">Refund Policy</a>
+    </div>
+    <p style="font-size:11px;color:#444;margin-top:1.25rem">© 2025 Ketogenic Fat Loss Diet 101. All rights reserved.</p>
+  </div>
+</footer>
+
+<!-- STICKY MOBILE BAR -->
+<div class="sticky-bar">
+  <button onclick="openLink('https://ideacraftai.gumroad.com/l/ketogenicfat101')">Get Instant Access — $7</button>
+</div>
+
+<script>
+// Navbar scroll effect
+const navbar = document.getElementById('navbar');
+window.addEventListener('scroll', () => {
+  navbar.classList.toggle('scrolled', window.scrollY > 40);
+});
+
+// Hamburger menu
+const hamburger = document.getElementById('hamburger');
+const mobileMenu = document.getElementById('mobileMenu');
+hamburger.addEventListener('click', () => {
+  mobileMenu.classList.toggle('open');
+});
+function closeMobileMenu() {
+  mobileMenu.classList.remove('open');
+}
+
+// Smooth scroll for nav links
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', e => {
+    const target = document.querySelector(a.getAttribute('href'));
+    if (target) {
+      e.preventDefault();
+      target.scrollIntoView({ behavior: 'smooth' });
+      closeMobileMenu();
+    }
+  });
+});
+
+// Fade-up on scroll
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.classList.add('visible');
+      observer.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.12 });
+document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+// FAQ accordion
+document.querySelectorAll('.faq-q').forEach(q => {
+  q.addEventListener('click', () => {
+    const item = q.parentElement;
+    const wasOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+    if (!wasOpen) item.classList.add('open');
+  });
+});
+</script>
+</body>
+</html>
