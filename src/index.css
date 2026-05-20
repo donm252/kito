@@ -1,0 +1,22 @@
+@import "tailwindcss";
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap');
+
+@theme {
+  --font-sans: "DM Sans", system-ui, -apple-system, sans-serif;
+  --font-serif: "Playfair Display", Georgia, serif;
+  
+  --color-rose-brand: #c2185b;
+  --color-rose-brand-dark: #880e4f;
+  --color-rose-brand-light: #fce4ec;
+  --color-rose-brand-mid: #ad1457;
+  --color-cream: #fffdf9;
+  --color-cream-section: #fffaf7;
+}
+
+@layer base {
+  body {
+    background-color: var(--color-cream);
+    color: #1c1410;
+  }
+}

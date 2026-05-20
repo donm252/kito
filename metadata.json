@@ -1,0 +1,6 @@
+{
+  "name": "Keto Fat Loss 101",
+  "description": "The complete Pinterest-perfect guide to rapid and sustainable ketogenic fat loss with interactive meal planners, grocery checklist, and calculator.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
